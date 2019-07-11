@@ -1,0 +1,46 @@
+$
+H_0: \mu_1=\mu_2=\hdots \mu_k=\mu_0 \\
+$
+$
+H_A:\quad \exists\quad i\quad / \quad \mu_i \neq \mu_0
+$
+
+\begin{align*}
+F_0  =& \quad \frac{Variabilidad \quad entre \quad grupos}{Variabilidad \quad intra \quad grupos}\\
+    =& \quad \frac{CM_{entre} }{CM_{intra}}\\
+\end{align*}
+\begin{minipage}[b]{\textwidth}
+    \begin{minipage}[b]{0.5 \textwidth}
+\begin{align*}
+CM_{entre}=&\quad\frac{SC_{entre}}{gl_{entre}}\\
+=&\quad n_i\sum(\bar{X_i}-\bar{\bar{X}})^2\\
+=&\quad \sum \frac{T^2_i}{n_i}-\frac{G^2}{N}
+\end{align*}    
+
+    \end{minipage} \hfill
+    \begin{minipage}[b]{0.5 \textwidth}
+\begin{align*}
+CM_{intra}=&\quad\frac{SC_{intra}}{gl_{intra}}\\
+=&\quad \sum(\bar{X_{ij}}-\bar{X})^2\\
+=&\quad \sum X^2_{ij}-\sum \frac{T^2_i}{n_i}
+\end{align*}    
+    \end{minipage}
+    \end{minipage}
+    
+    
+
+          \begin{table}[h!]
+         \centering
+         \begin{tabular}{|l|c|c|c|c|} \hline
+             Factor de Variación & SC & gl & CM & $F_0$\\ \hline
+             Entre los grupos & $SC_{entre}$ &k-1&$\frac{SC_{entre}}{k-1}$ &\\
+             Dentro de los grupos & $SC_{intra}$ &n-k&$\frac{SC_{intra}}{n-kk}$ & \\ \hline
+             Total & $SC_{Total}$& & & \\ \hline
+             
+         \end{tabular}
+         \caption{Tabla de Análisis de Varianza}
+         \label{tab:my_label}
+     \end{table}
+
+
+Rechazo $H_0$ si $F_{(1-\alpha; k-1; n-k)} < F_0$

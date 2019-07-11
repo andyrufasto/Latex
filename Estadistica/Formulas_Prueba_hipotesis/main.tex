@@ -1,0 +1,113 @@
+\documentclass[15pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[]{tikz}
+\usepackage{amsmath}
+\usepackage{animate}
+\usepackage{fp}
+\usepackage{graphicx}
+\usepackage{pstricks}
+\usepackage{media9}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage[x11names,table]{xcolor}
+
+\begin{filecontents}{timeline.txt}
+::0x0 % coordinate system & y=e^x, repeated until last frame
+::1 % one blue curve per frame
+::2
+::3
+::4
+::5
+::6
+::7
+::8
+\end{filecontents}
+
+\pgfplotsset{compat=1.7}
+
+\usepackage[pagestyles]{titlesec}
+\usepackage{titlesec} %para quitar chaptername
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Large}
+    %
+
+    %
+\textheight = 23.5cm % largo texto impreso
+\textwidth = 18cm % ancho texto impreso
+\topmargin = -2cm % margen superior 3-2=1cm
+\oddsidemargin = -1cm % margen izquierdo 4.5-2=2.5cm
+% Sangría=0mm
+\headheight = -0.5cm
+
+
+%RENAME
+\renewcommand{\chaptername}{\underline {Capítulo}}
+\renewcommand{\contentsname}{CONTENIDO}
+\renewcommand{\tablename}{Tabla}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\definecolor{usm}{RGB}{176,153,40}
+
+
+\title{
+        {\sc \bf \color{usm} PRUEBA DE HIPÓTESIS} 
+        \\
+        {\vfill}
+        \\
+        {\includegraphics[scale=0.17]{unmsm1.png}}
+        \\
+        {}
+        \\
+        {Facultad de Ciencias Económicas}
+       }
+    \author{Rufasto C. Andy}
+    \date{}
+    
+
+\begin{document}
+
+
+\maketitle
+\begingroup
+\large
+\tableofcontents
+\endgroup
+        \begingroup
+        \large
+
+\newpage
+    \chapter{\color{usm}PASOS PARA LA PRUEBA DE HIPÓTESIS}
+        \input{ppph.tex}
+    \newpage
+    \chapter{\color{usm}MEDIA POBLACIONAL}
+    \section{Varianza Conocida}
+        \input{mp_vc.tex}
+    \section{Varianza Desconocida y $n<30$}
+        \input{mp_vd.tex}
+        \newpage
+     \chapter{\color{usm}PROPORCION POBLACIONAL}
+        \input{pp-V.tex}
+     
+     \chapter{\color{usm}VARIANZA POBLACIONAL}
+        \input{Var.tex}
+        \newpage
+    \chapter{\color{usm} DIFERENCIAS POBLACIONALES}
+        \section{Varianzas Conocidas}
+            \input{dp-vc.tex}
+        \section{Varianzas Desconocidas e iguales}
+            \input{dp-vdi.tex}
+            \newpage
+        \section{Varianzas Desconocidas y diferentes}
+            \input{dp-vdd.tex}
+    \chapter{\color{usm}DIFERENCIA DE PROPORCIONES}
+            \input{dpp.tex}
+            \newpage
+    \chapter{\color{usm}ANOVA}
+            \input{aov.tex}
+        \endgroup
+\end{document}
