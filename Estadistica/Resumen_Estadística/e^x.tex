@@ -1,0 +1,15 @@
+\begin{center}
+\animategraphics[
+label=taylor,
+controls, loop,
+timeline=timeline.txt
+]{4}{exp_}{0}{8}
+\mediabutton[
+jsaction={
+if(anim[’taylor’].isPlaying)
+anim[’taylor’].pause();
+else
+anim[’taylor’].playFwd();
+}
+]{\fbox{Play/Pause}}
+\end{center}

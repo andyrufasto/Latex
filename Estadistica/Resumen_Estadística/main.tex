@@ -1,0 +1,96 @@
+\documentclass[15pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[]{tikz}
+\usepackage{amsmath}
+\usepackage{animate}
+\usepackage{fp}
+\usepackage{pstricks}
+\usepackage{media9}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage[x11names,table]{xcolor}
+
+\begin{filecontents}{timeline.txt}
+::0x0 % coordinate system & y=e^x, repeated until last frame
+::1 % one blue curve per frame
+::2
+::3
+::4
+::5
+::6
+::7
+::8
+\end{filecontents}
+
+\pgfplotsset{compat=1.7}
+
+\usepackage[pagestyles]{titlesec}
+\usepackage{titlesec} %para quitar chaptername
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Large}
+    %
+
+    %
+\textheight = 23.5cm % largo texto impreso
+\textwidth = 18cm % ancho texto impreso
+\topmargin = -2cm % margen superior 3-2=1cm
+\oddsidemargin = 0cm % margen izquierdo 4.5-2=2.5cm
+% Sangría=0mm
+\headheight = -0.5cm
+
+
+%RENAME
+\renewcommand{\chaptername}{\underline {Capítulo}}
+\renewcommand{\contentsname}{CONTENIDO}
+\renewcommand{\tablename}{Tabla}
+
+\definecolor{usm}{RGB}{176,153,40}
+
+
+\title{
+        {\sc \bf \color{usm} FORMULARIO DE ESTADÍSTICA} 
+        \\
+        {\vfill}
+        \\
+        {\includegraphics[scale=0.17]{unmsm1.png}}
+        \\
+        {}
+        \\
+        {Facultad de Ciencias Económicas}
+       }
+    \author{Rufasto C. Andy}
+    \date{}
+    
+
+\begin{document}
+
+
+\maketitle
+
+
+\tableofcontents
+        \begingroup
+        \Large
+    \chapter{ \color{usm} DISTRIBUCIÓN DE FRECUENCIAS}
+            \input{1_Dis_frec.tex}
+    
+    \chapter{ \color{usm}MEDIDAS DE TENDENCIA CENTRAL}
+            \input{2_tend_cen.tex}
+            
+    \chapter{\color{usm}MEDIDAS DE DISPERSIÓN}
+            \input{3_Disp.tex}
+    
+    \chapter{\color{usm}FUNCIÓN GENERADORA DE MOMENTOS}
+            \input{5_fgm.tex}
+            
+    \chapter{\color{usm}Distribuciones de Probabilidad}
+            \input{4_D_B.tex}
+            \input{4_D_C.tex}
+            
+    \chapter{\color{usm}ESTIMACION DE INTERVALO PARA MEDIA POBLACIONAL}
+            \input{n_imp.tex}
+            
+            
+        \endgroup
+\end{document}

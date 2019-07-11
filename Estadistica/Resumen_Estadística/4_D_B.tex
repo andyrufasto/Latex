@@ -1,0 +1,146 @@
+\section{Distribuciones de Probabilidad Discretas}
+
+    \subsection{Distribución de Bernulli}
+    La distribución de Bernulli es una distribución de probabilidad discreta en el que existen solo probabilidad de éxito (\textbf{p}) y de fracaso (\textbf{q})
+    
+    $$0<p<1, \;p \in \mathbb{R} \; \wedge \; q=1-p$$\\
+    
+    Sea \textbf{X} una variable aleatoria, que mide el número de éxitos cuando se realiza un único experimento con dos resultados posibles, entonces X se distribuye como una Bernulli de parámetro \textbf{p}.\\
+    
+    $X \sim Be(p)$ con función de probabilidad {\color{usm} $f\left( x \right) ={ p }^{ x }{ (1-p) }^{ 1-x }$} \\
+    
+          \begin{minipage}[b]{\textwidth}
+\begin{minipage}[b]{0.5 \textwidth}
+ \begin{eqnarray*}
+        {\color{usm}\mu} :=E(X) & = & 0\times q+1\times p\\
+                                & = & p
+    \end{eqnarray*}
+\end{minipage} \hfill \begin{minipage}[b]{0.5 \textwidth}
+\begin{eqnarray*}
+        {\color{usm}{ \sigma  }^{ 2 }} := var(X) & = & p-{p}^{2}\\
+                                                & = & p(1-p)
+    \end{eqnarray*}
+\end{minipage}
+\end{minipage}
+\newpage    
+
+    \subsection{Distribución Binomial}\\
+    
+    Sea \textbf{X} una variable aleatoria que mide el número de éxitos en \textbf{n} experimentos con dos resultados posibles \textbf{p} y \textbf{q}, entonces X se distribuye como una Binomial de parámetros n y p.\\
+    $$0<p<1, \;p \in \mathbb{R} \; \wedge \; q=1-p \; ; \; n \in \mathbb{N}$$\\
+    
+    $X \sim B(n,p)$ con función de robabilidad { \color{usm}f $\left( x \right) =\left( \begin{matrix} n \\ x \end{matrix} \right) { p }^{ x }{ (1-p) }^{ 1-x }$}\\
+  
+    $\left( \begin{matrix} n \\ x \end{matrix} \right) =\dfrac { n! }{ x! \; (n-x)! }$ \\
+    
+     \begin{minipage}[b]{\textwidth}
+\begin{minipage}[b]{0.5 \textwidth}
+ \begin{eqnarray*}
+        {\color{usm}\mu} :=E(X)  =  np\\
+                                
+    \end{eqnarray*}
+\end{minipage} \hfill \begin{minipage}[b]{0.5 \textwidth}
+\begin{eqnarray*}
+        {\color{usm}{ \sigma  }^{ 2 }} := var(X)  =  np(1-p)\\
+                                                
+    \end{eqnarray*}
+\end{minipage}
+\end{minipage}
+     
+         \begin{table}[h!]
+     \begin{center}
+     
+\begin{tabular}[t]{|r|r|cccccccccc|}
+
+\hline
+$n$ & $x$ &$p$ & 0.01 & 0.02 & 0.03 & 0.04 & 0.05 & 0.06 & 0.07 & 0.08 & 0.09 \\
+\hline
+\phantom{0}1 
+& \phantom{0}0
+   &&0.9900&0.9800&0.9700&0.9600&0.9500&0.9400&0.9300&0.9200&0.9100\\
+& 1&&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000\\
+2 
+& 0&&0.9801&0.9604&0.9409&0.9216&0.9025&0.8836&0.8649&0.8464&0.8281\\
+& 1&&0.9999&0.9996&0.9991&0.9984&0.9975&0.9964&0.9951&0.9936&0.9919\\
+& 2&&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000\\
+3 
+& 0&&0.9703&0.9412&0.9127&0.8847&0.8574&0.8306&0.8044&0.7787&0.7536\\
+& 1&&0.9997&0.9988&0.9974&0.9953&0.9928&0.9896&0.9860&0.9818&0.9772\\
+& 2&&1.0000&1.0000&1.0000&0.9999&0.9999&0.9998&0.9997&0.9995&0.9993\\
+& 3&&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000\\
+4 
+& 0&&0.9606&0.9224&0.8853&0.8493&0.8145&0.7807&0.7481&0.7164&0.6857\\
+& 1&&0.9994&0.9977&0.9948&0.9909&0.9860&0.9801&0.9733&0.9656&0.9570\\
+& 2&&1.0000&1.0000&0.9999&0.9998&0.9995&0.9992&0.9987&0.9981&0.9973\\
+& 3&&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&0.9999\\
+& 4&&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000\\
+5 
+& 0&&0.9510&0.9039&0.8587&0.8154&0.7738&0.7339&0.6957&0.6591&0.6240\\
+& 1&&0.9990&0.9962&0.9915&0.9852&0.9774&0.9681&0.9575&0.9456&0.9326\\
+& 2&&1.0000&0.9999&0.9997&0.9994&0.9988&0.9980&0.9969&0.9955&0.9937\\
+& 3&&1.0000&1.0000&1.0000&1.0000&1.0000&0.9999&0.9999&0.9998&0.9997\\
+& 4&&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000&1.0000\\
+\hline
+\end{tabular}
+    \end{center}
+    \caption{
+Función de distribución acumulativa binomial}
+    \end{table}
+    
+    \newpage
+    
+    \subsection{Distribución de Poisson}\\
+    Sea \textbf{k} el número de ocurrencias del evento o fenómeno, y sea $\texfbf{\lambda}$ un parámetro positivo que representa el número de veces que se espera que ocurra el fenómeno durante un intervalo de tiempo dado.
+    
+    \begin{minipage}[b]{\textwidth}
+\begin{minipage}[b]{0.5 \textwidth}
+ \begin{eqnarray*}
+        \lambda \quad \in \quad \left\{ 0,\infty  \right\}\\
+        k\quad \in \quad \mathbb{N}\\
+        
+        e & := &{ lim }_{ n\rightarrow \infty  }{ \left( 1+\frac { 1 }{ n }  \right)  }^{ n }\\
+            & = & 2.7182818284 \dots\\
+    \end{eqnarray*}
+\end{minipage} \hfill \begin{minipage}[b]{0.5 \textwidth}
+    \input{e^x.tex}
+\end{minipage}
+\end{minipage}
+    
+    \textbf{X} la variable aleatoria que mide la probabilidad de dicho suceso, entonces X tiene una distribución Poisson.\\
+    $X \sim Poi(\lambda)$ con funcion de probabilidad $ {\color{usm} f\left( x \right) =\frac { { e }^{ -x }{ \lambda  }^{ x } }{ x! } } $\\
+    
+ \begin{minipage}[b]{\textwidth}
+\begin{minipage}[b]{0.5 \textwidth}
+ \begin{eqnarray*}
+        {\color{usm}\mu} & := & E(X) & \\
+                            & = & \lambda
+    \end{eqnarray*}
+\end{minipage} \hfill \begin{minipage}[b]{0.5 \textwidth}
+\begin{eqnarray*}
+        {\color{usm}{ \sigma  }^{ 2 }} & := &  var(X) \\
+                                        & = & \lambda
+    \end{eqnarray*}
+\end{minipage}
+\end{minipage}
+
+    \subsection{Distribución Hipergeométrica}\\
+    
+    Si \textbf{N} es el tamaño de la población, \textbf{n} el tamaño de la muestra extraída, \texfbf{m} el número de elementos de la población original deseada, \textbf{X} es el número de elementos en la muestra que pertenecen dicha categoría, Se tiene una distribución Hipergeométrica.\\
+    
+    $ X \sim H(N,m,n) $ con función de probabilidad ${\color{usm} f\left( x \right) =\frac { \left( \begin{matrix} m \\ x \end{matrix} \right) \left( \begin{matrix} N-m \\ n-x \end{matrix} \right)  }{ \left( \begin{matrix} N \\ n \end{matrix} \right)  } }$
+    
+     \begin{minipage}[b]{\textwidth}
+\begin{minipage}[b]{0.5 \textwidth}
+ \begin{eqnarray*}
+        {\color{usm}\mu} & := & E(X) & \\
+                            & = & \frac{nm}{N}
+    \end{eqnarray*}
+\end{minipage} \hfill \begin{minipage}[b]{0.5 \textwidth}
+\begin{eqnarray*}
+        {\color{usm}{ \sigma  }^{ 2 }} & := &  var(X) \\
+                                        & = & n\frac { m }{ N } \left( \frac { N-m }{ N }  \right) \left( \frac { N-m }{ N-1 }  \right) 
+    \end{eqnarray*}
+\end{minipage}
+\end{minipage}
+
+\newpage

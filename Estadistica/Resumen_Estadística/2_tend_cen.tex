@@ -1,0 +1,72 @@
+ \section{Media}
+
+\subsection{Media Aritmética}
+
+\begin{figure}[!h]
+
+\begin{minipage}[t]{0.3\textwidth}
+	Método Largo
+	\begin{align*}
+	\bar { x } 	& =\sum _{ i=1 }^{ N }{ \frac { { x }_{ i } }{ N }  } 			\\
+				& =\sum _{ i=1 }^{ N }{ \frac { { x }_{ i }{ f }_{ i } }{ N }  } 
+	\end{align*}
+\end{minipage} \hfill \begin{minipage}[t]{0.3\textwidth}
+	Método Corto
+	\begin{align*}
+	Si \quad {x}_{i}	& ={ d }_{ i }+A 				\\
+		\bar{x}			& =\overline {d+A} 				\\
+						& =\overline {d}+A 				\\
+		\bar {x}_{i}	& =\sum _{ i=1 }^{ N }{ \frac { { x }_{ i }{ d }_{ i } }{ N } + A  }
+	\end{align*}
+\end{minipage} \hfill \begin{minipage}[t]{0.3\textwidth}
+	Método Clave
+	\begin{align*}
+	{d}_{i}				& =c{u}_{i}						\\
+				x		& =c{u}_{i} + A					\\
+				\bar{x} & =c\left[ \sum _{ i=1 }^{ N }{ \frac { { f }_{ i }{ u }_{ i } }{ N }  }  \right] +A
+	\end{align*}
+
+\end{minipage}
+\end{figure}
+
+    \begin{minipage}[b]{\textwidth}
+\begin{minipage}[b]{0.5 \textwidth}
+
+\subsection{Media Geométrica}
+    \begin{equation*}
+G=\sqrt [ n ]{ { X }_{ 1 }^{ { f }_{ 1 } }.{ X }_{ 2 }^{ { f }_{ 2 } }.{ X }_{ 3 }^{ { f }_{ 3 } }\dots { X }_{ n}^{ { f }_{ n} } } 
+    \end{equation*}
+    
+     \end{minipage} \hfill \begin{minipage}[b]{0.5 \textwidth}
+\subsection{Media Armónica}
+\begin{equation*}
+H=\frac { n }{ \sum _{ i=1 }^{ n }{ \frac { 1 }{ x_{ i }.{ f }_{ i } }  }  }
+\end{equation*}
+    \end{minipage}
+    \end{minipage}
+
+\section{Mediana}
+\begin{minipage}[t]{0.5\textwidth}
+	\begin{equation*}
+Med={ L }_{ i }+c\left[ \frac { \frac { n }{ 2 } -{ F }_{ i-1 } }{ { F }_{ i }-{ F }_{ i-1 } }  \right] 
+	\end{equation*}
+ \end{minipage} \hfill \begin{minipage}[t]{0.5\textwidth}
+ ${L}_{i}$: Límite inferior de la clase modal. \\
+ ${F}_{i}$: frecuencia acumulada del intervalo mediano.
+ \end{minipage}
+ 
+\section{Moda}
+\begin{minipage}[t]{0.5\textwidth}
+	\begin{equation*}
+\tilde { x } ={ L }_{ i }+c\left[ \frac { { \Delta  }_{ 1 } }{ { \Delta  }_{ 1 }+{ \Delta  }_{ 2 } }  \right] 
+ \end{equation*}
+ \end{minipage} \hfill \begin{minipage}[t]{0.5\textwidth}
+	\begin{equation*}
+{ \Delta  }_{ 1 }: f_{ i }-f_{ i-1 }
+	\end{equation*}
+	\begin{equation*}
+{ \Delta  }_{ 2 }: f_{ i }-f_{ i+1 }
+	\end{equation*}
+
+
+\end{minipage}

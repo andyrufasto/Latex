@@ -1,0 +1,49 @@
+\section{Distribuciónes de Frecuencias}
+\begin{figure}[!h]
+	\begin{minipage}{0.5\textwidth}
+	
+
+R	 =  V_{max} - V_{min}  		\\[0.2cm]
+	
+C	 =  \dfrac{R}{K}			\\[0.2cm]
+	
+K	 =  1\;+\;3.332\log{N}		\\[0.2cm]
+	
+$F	 =  K*C\;-\;R$				\\[0.2cm]
+
+ 
+    
+	\end{minipage} \hfill \begin{minipage}{0.5\textwidth}
+	   
+	R: \;Rango					\\
+	V: \;Valor					\\	
+	C: \;Amplitud de intervalo	\\
+	K: \;Número de clase			\\
+	$k\quad \in \quad \left[ 5;20 \right]$\\ 
+	F: \;Factor de centralización	\\
+	N: \;Número de datos
+	    
+							\end{minipage}
+	\end{figure}
+	
+\section{Tabla de Frecuencias}
+
+\begin{table}[h]
+    \centering
+    
+ \begin{tabular}[c]{|l||c|c|c|c|l|}
+
+\hline
+        & ${x}_{i}$ & {f}_{i} & {F}_{i} & {h}_{i} & {H}_{i} \\
+\hline\hline
+i=1     & $\left[ { V }_{ min };{ V }_{ min }+c \right>$ & {f}_{1} & {f}_{1} & {f}_{1}/N & {F}_{1}/N\\\hline
+i=2     & \left[ { L}_{i2};{ L}_{i2}+c\right> & {f}_{2} & {F}_{1}+{f}_{2} & {f}_{2}/N  & {F}_{2}/N\\\hline
+i=3     & \left[ { L}_{i3};{ L}_{i3}+c\right> & {f}_{3} & {F}_{2}+{f}_{3} & {f}_{3}/N & {F}_{3}/N\\\hline
+\vdots  & \vdots & \vdots & \vdots & \vdots & \vdots \\\hline
+i=k     & \left[ { L}_{ik};{ L}_{ik}+c\right> &  {F}_{k} & N  & {f}_{k}/N & 1\\\hline
+
+\end{tabular}
+\caption{Tabla de Distribución de Frecuencias}
+    \label{tab:my_label}
+    
+\end{table}

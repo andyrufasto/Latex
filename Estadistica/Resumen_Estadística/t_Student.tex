@@ -1,0 +1,30 @@
+\begin{center}
+\begin{animateinline}[loop,poster = first, controls]{1}
+\multiframe{20}
+\def\basefunc{%
+    gamma(.5*(\n+1))/(sqrt(\n*pi)*gamma(.5*\n))*((1+x^2/\n)^(-.5*(\n+1)))%
+}
+
+\foreach \n in {1,...,20}{
+    
+    \begin{tikzpicture}
+        
+        \begin{axis}[
+            ymin=0,
+            ymax=.41,
+        ]
+            \addplot gnuplot [
+                smooth,
+                no marks,
+                usm,
+                domain={-6:+6},
+                ]{\basefunc};
+            \legend{$n = \n$}
+        \end{axis}
+    \end{tikzpicture}
+    
+}
+
+\stepcounter{n}
+\end{animateinline}\relax
+\end{center}
