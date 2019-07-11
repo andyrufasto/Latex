@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{underoverlap}
+\usepackage{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepgfplotslibrary{fillbetween}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+ \title{Tarea}
+\date{}
+\author{Andy Rufasto}
+
+\begin{document}
+\maketitle
+Se toma una muestra de bebedores de cerveza y se les pregunto su preferencia entre 3 tipos de cerveza: PILSEN, CUZQUEÑA y CRISTAL.\\
+\center{RESULTADOS:}\\
+\begin{table}[h]
+\center
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{Tipo de Cerveza} & \multicolumn{2}{c|}{Género} \\ \cline{2-3} 
+                                 & Masculino     & Femenino    \\ \hline \hline
+PILSEN                           & 51            & 39          \\ \hline
+CUZQUEÑA                         & 56            & 21          \\ \hline
+CRISTAL                          & 25            & 8           \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{flushleft}
+El interes del investigador es determinar si la preferencia por un tipo de cerveza está determinado por el género del consumidor o es independiente del consumidor. $\alpha = 0.05$\\
+
+$H_0$ = La preferencia por el tipo de cerveza es independiente del género del bebedor\\
+$H_A$ = La preferencia por el tipo de cerveza no es independiente del género del bebedor\\
+
+\end{flushleft}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l||l|}
+\hline
+\multirow{2}{*}{Tipo de Cerveza} & \multicolumn{2}{c|}{Género} &       \\ \cline{2-4} 
+                                 & Masculino     & Femenino    & Total \\ \hline \hline
+PILSEN                           & 51            & 39          & 90    \\ \hline
+CUZQUEÑA                         & 56            & 21          & 77    \\ \hline
+CRISTAL                          & 25            & 8           & 33    \\ \hline \hline
+\multicolumn{1}{|r|}{Total}      & 132           & 68          & 200   \\ \hline
+\end{tabular}
+\caption{Valores observados}
+\end{table}
+
+\begin{table}[h]
+\center
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{2}{*}{Tipo de Cerveza} & \multicolumn{2}{c|}{Género} \\ \cline{2-3} 
+                                 & Masculino     & Femenino    \\ \hline \hline
+PILSEN                           & $\dfrac{132 \times 90}{200} = 59.40$ & $\dfrac{68 \times 90}{200} = 30.60$       \\ [1ex] \hline
+CUZQUEÑA                         & $\dfrac{132 \times 77}{200} = 50.82$ & $\dfrac{68 \times 77}{200} = 26.18$       \\ [1ex] \hline
+CRISTAL                          & $\dfrac{132 \times 33}{200} = 21.78$ & $\dfrac{68 \times 33}{200} = 11.22$       \\ [1ex] \hline
+\end{tabular}
+\caption{Valores esperados}
+\end{table}
+
+
+Estadisatico de prueba: 
+
+$ \dfrac{(f_{ij}-e_{ij})^2}{e_{ij}} \sim \chi^2_{(k,\; 1-\alpha)}$
+
+\newpage
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ll|l|rrr|r|}
+\hline
+\multicolumn{1}{|l|}{Tipo} & Genero & $f_{ij}$ & \multicolumn{1}{r|}{$e_{ij}$} & \multicolumn{1}{r|}{($f_{ij} - e_{ij}$ )} & $ (f_{ij} - e_{ij})^2 $ & $\dfrac{(f_{ij}-e_{ij})^2}{e_{ij}}$ \\ [1ex] \hline \hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{Pilsen}} & Masculino & 51 & \multicolumn{1}{r|}{59.40} & \multicolumn{1}{r|}{-8.4} & 70.56 & 1.38 \\ \cline{2-7} 
+\multicolumn{1}{|l|}{} & Femenino & 39 & \multicolumn{1}{r|}{30.60} & \multicolumn{1}{r|}{8.4} & 70.56 & 1.80 \\ \hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{Cuzqueña}} & Masculino & 56 & \multicolumn{1}{r|}{50.82} & \multicolumn{1}{r|}{5.18} & 26.83 & 0.48 \\ \cline{2-7} 
+\multicolumn{1}{|l|}{} & Femenino & 21 & \multicolumn{1}{r|}{26.18} & \multicolumn{1}{r|}{-5.18} & 26.83 & 1.28 \\ \hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{Cristal}} & Masculino & 25 & \multicolumn{1}{r|}{21.78} & \multicolumn{1}{r|}{3.22} & 10.37 & 0.41 \\ \cline{2-7} 
+\multicolumn{1}{|l|}{} & Femenino & 8 & \multicolumn{1}{r|}{11.22} & \multicolumn{1}{r|}{-3.22} & 10.37 & 1.30 \\ \hline
+ &  & 200 &  &  &  & 6.65 \\ \cline{3-3} \cline{7-7} 
+\end{tabular}
+\caption{Calculo del Estadístico de Prueba}
+\end{table}
+
+Siendo:\\
+\begin{align*}
+\alpha &= 0.05\\
+	  k&= (i-1)\times (j-1)\\
+	   &=(3-1)\times(2-1)\\
+	   &=2\\
+\chi^2 _0 &= \chi^2_{(2,\;0.95)}\\
+       &= 5.99
+\end{align*}
+
+$6.65 \ge 5.99$\\
+
+Se rechaza la hipótesis nula: No existe suficiente evidencia estadística para afirmar que La preferencia por el tipo de cerveza es independiente del genero del bebedor.
+
+	   
+\end{document}
+
