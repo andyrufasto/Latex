@@ -1,0 +1,84 @@
+\section{Promedio}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrl}
++ & IIPP          &  \rdelim\}{4}{mm}[Flujo de Unidades] \\
++ & U. emp        &  \\ \cline{1-2}
+  & U. Disp       &  \\
+- & IFPP          &  \\ \cline{1-2}
+  & U. Trans      &  \rdelim\}{3}{mm}[Unidades Equivalentes] \\
++ & U IFPP (\% A) &  \\ \cline{1-2}
+  & U Eq          & 
+\end{tabular}
+\end{table}
+\centering
+\[
+\hspace{1.4cm}
+\begin{rcases*}
+CF_{ EyT }=\dfrac{ C.\: inc + C.\; agr }{ Ueq } \\ 
+CF_{IFPP}=CF_{EyT} \times (\%A) 
+\end{rcases*} \text{Calculo CF} 
+\]
+\begin{table}[h]
+\hspace{1.9cm}
+\begin{tabular}{llll}
++ & U. EyT \times CF_{EyT}       & = CT_{EyT}    &  \rdelim\}{3}{mm}[Informe de Costos]\\
++ & U. IIPPyT \times  CF_{IIPPyT} & = CT_{IIPPyT} &  \\ \cline{2-3}
+  & Costos Transferidos                            & = C. agr + C. inc  & 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\hspace{0.9cm}
+\begin{tabular}{lllllllll}
+\multicolumn{2}{l}{Costos Varios} &  & \multicolumn{2}{l}{Inv. P. Proc}              &  & \multicolumn{2}{l}{Inv. P. Term}        &  \rdelim\}{3}{mm}[Registro Contable]  \\ \cline{1-2} \cline{4-5} \cline{7-8} 
+\multicolumn{1}{l|}{}   & C. inc  &  & \multicolumn{1}{l|}{C. inc} & CT_{U. Tran} &  & \multicolumn{1}{l|}{CT_{U. Tran}} &  &  \\
+\multicolumn{1}{l|}{}   & C. agr  &  & \multicolumn{1}{l|}{C. agr} &                 &  & \multicolumn{1}{l|}{}                &  & 
+\end{tabular}
+\end{table}
+\newpage
+
+\section{Fifo}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrl}
++ & IIPP          &  \rdelim\}{4}{mm}[Flujo de Unidades] \\
++ & U. emp        &  \\ \cline{1-2}
+  & U. Disp       &  \\
+- & IFPP          &  \\ \cline{1-2}
+  & U. Trans      &  \rdelim\}{5}{mm}[Unidades Equivalentes] \\
+- & U. IIPP        &  \\
++ & U. IIPP (\% F) & \\
++ & U IFPP (\% A) &  \\ \cline{1-2}
+  & U Eq          & 
+\end{tabular}
+\end{table}
+\centering
+\[
+\hspace{cm}
+\begin{rcases*}
+CF_{ EyT }=\dfrac{C.\; agr }{ Ueq } \\ 
+CF_{IFPPyT}= \dfrac{C.\;inc }{ U. IIPP} + CF_{EyT}(\% F)\\
+CF_{IFPP}= CF_{EyT}(\% A)
+\end{rcases*} \text{Calculo CF} 
+\]
+\begin{table}[h]
+\hspace{1.9cm}
+\begin{tabular}{llll}
++ & U. EyT \times CF_{EyT}       & = CT_{EyT}    &  \rdelim\}{3}{mm}[Informe de Costos]\\
++ & U. IIPPyT \times  CF_{IIPPyT} & = CT_{IIPPyT} &  \\ 
++ & U IFPP \times CF_{IFPP} & = CT_{IFPP} & \\ \cline{2-3}
+  & Costos Transferidos                            & = C. agr + C. inc  & 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\hspace{0.9cm}
+\begin{tabular}{lllllllll}
+\multicolumn{2}{l}{Costos Varios} &  & \multicolumn{2}{l}{Inv. P. Proc}              &  & \multicolumn{2}{l}{Inv. P. Term}        &  \rdelim\}{3}{mm}[Registro Contable]  \\ \cline{1-2} \cline{4-5} \cline{7-8} 
+\multicolumn{1}{l|}{}   & C. inc  &  & \multicolumn{1}{l|}{C. inc} & CT_{U. Tran} &  & \multicolumn{1}{l|}{CT_{U. Tran}} &  &  \\
+\multicolumn{1}{l|}{}   & C. agr  &  & \multicolumn{1}{l|}{C. agr} &                 &  & \multicolumn{1}{l|}{}                &  & 
+\end{tabular}
+\end{table}

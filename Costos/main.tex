@@ -1,0 +1,106 @@
+\documentclass[15pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fp}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{media9}
+\usepackage{multicol}
+\usepackage[parfill]{parskip}
+\usepackage{pgfplots}
+\usepackage{pstricks}
+\usepackage{sectsty}
+\usepackage[]{tikz}
+\usepackage[pagestyles]{titlesec}
+\usepackage{xcolor}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{multirow,bigdelim}
+\newenvironment{Table}
+   {\par\bigskip\noindent\minipage{\columnwidth}\centering}
+   {\endminipage\par\bigskip}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\definecolor{usm}{RGB}{176,153,40}
+\chapterfont{\color{usm}}  % sets colour of chapters
+\sectionfont{\color{usm}}  % sets colour of sections
+\begin{filecontents}{timeline.txt}
+::0x0 % coordinate system & y=e^x, repeated until last frame
+::1 % one blue curve per frame
+::2
+::3
+::4
+::5
+::6
+::7
+::8
+\end{filecontents}
+
+\headheight = -0.5cm
+\oddsidemargin = 0cm % margen izquierdo 4.5-2=2.5cm
+\pgfplotsset{compat=1.7}
+\textheight = 23.5cm % largo texto impreso
+\textwidth = 18cm % ancho texto impreso
+\titleformat{\chapter}[display]
+  {\normalfont \bfseries}{}{0pt}{\Large}
+\topmargin = -2cm % margen superior 3-2=1cm
+
+%RENAME
+\renewcommand{\chaptername}{\underline{Capítulo}}
+\renewcommand{\contentsname}{\color{usm}\underline{\textbf{CONTENIDO}}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+
+\title{
+        {\sc \bf \color{usm} \huge{COSTOS}\\ \LARGE{plaje}}
+        \\
+%        {\vfill}
+%       \\
+      {\includegraphics[scale=0.17]{unmsm.png}}
+       \\
+        {Rufasto C. Andy}
+       \\
+        {Facultad de Ciencias Económicas}
+       }
+    \author{RUFASTO C. ANDY}
+    \date{}
+
+\begin{document}
+	\begingroup
+	\Large
+	\maketitle 
+\newpage
+	\tableofcontents
+\newpage
+	\chapter{\color{usm}Costos}
+	\maketitle \vskip-25pt \hrule\vskip10pt
+\section{Definición}
+	\input{def.tex}
+\section{Objetivos}
+	\input{objetivos.tex}
+\newpage
+	\chapter{\color{usm}Tipos de Coste}
+	\maketitle \vskip-25pt \hrule\vskip10pt
+	\input{tipos.tex}
+	\endgroup
+	\chapter{\color{usm}Costo Absorvente}
+	\input{tca.tex}
+	\chapter{\color{usm}Costo Variable o Directo}
+	\input{tcv.tex}
+
+\newpage
+	\chapter{\color{usm}Costos por Proceso}
+	\input{cpp.tex}
+	\flushleft
+	\chapter{\color{usm}Costos Estándar}
+	\input{cemp.tex}
+	\chapter{\color{usm}Presupuesto}
+	\input{presupuesto.tex}
+\end{document}
+
+
