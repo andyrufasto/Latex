@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\documentclass[15pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[]{tikz}
+\usepackage{amsmath}
+\usepackage{pstricks}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+
+\pgfplotsset{compat=1.7}
+\title{Gauss}
+\author{Andy Rufasto}
+\date{April 2018}
+
+\begin{document}
+
+
+
+
+\maketitle
+
+\section{Introduction}
+
+
+
+
+\begin{document}
+\pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\begin{tikzpicture}
+
+\begin{axis}[no markers, domain=0:10, samples=100,
+axis lines*=left, xlabel=$\overline { x }$, ylabel=$f\left( \overline { x }\right)$,
+height=6cm, width=10cm,
+xticklabels={,,${ Z }_{ { \alpha  }/{ 2 } }=-1.96$,,$\mu$,,${ Z }_{ { \alpha  }/{ 2 } }=1.96$,}, ytick=\empty,
+enlargelimits=false, clip=false, axis on top,
+grid = major]
+\addplot [fill=usm!20, draw=none, domain=-3:3] {gauss(0,1)} \closedcycle;
+\addplot [fill=gray!20, draw=none, domain=-3:-2] {gauss(0,1)} \closedcycle;
+\addplot [fill=gray!20, draw=none, domain=2:3] {gauss(0,1)} \closedcycle;
+\addplot [fill=usm!20, draw=none, domain=-2:-1] {gauss(0,1)} \closedcycle;
+\addplot [fill=usm!20, draw=none, domain=1:2] {gauss(0,1)} \closedcycle;
+\end{axis}
+\end{tikzpicture}
+\end{document}
+
+\end{document}
